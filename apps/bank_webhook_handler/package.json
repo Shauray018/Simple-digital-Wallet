@@ -1,0 +1,25 @@
+{
+  "name": "bank_webhook_handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx esbuild ./src/index.ts --bundle --platform=node --outfile=dist/index.js && npm run copy-prisma-engine",
+    "copy-prisma-engine": "copyfiles -u 4 \"../../node_modules/@prisma/engines/query_engine-windows.dll.node\" dist",
+    "start": "node dist/index.js",
+    "dev": "npm run build && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.16.2",
+    "@repo/db": "*",
+    "@types/express": "^4.17.21",
+    "esbuild": "^0.20.2",
+    "express": "^4.19.1"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  }
+}
