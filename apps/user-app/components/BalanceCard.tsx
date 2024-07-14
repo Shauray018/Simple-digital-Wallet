@@ -1,5 +1,4 @@
 import { Card } from "@repo/ui/card";
-import ShimmerButton from "../magicui/shimmer-button";
 
 export const BalanceCard = ({amount, locked}: {
     amount: number;
