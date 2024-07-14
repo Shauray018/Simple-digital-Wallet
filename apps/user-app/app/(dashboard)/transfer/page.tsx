@@ -1,9 +1,9 @@
 "use server";
 // import prisma from "../../../../../packages/db";
 import prisma from "@repo/db/client";
-import { AddMoney } from "../../../components/Addmoneycard";
-import { BalanceCard } from "../../../components/BalanceCard";
-import { OnRampTransactions } from "../../../components/OnRampTransaction";
+import { AddMoney } from "../../../@/components/ui/Addmoneycard";
+import { BalanceCard } from "../../../@/components/ui/BalanceCard";
+import { OnRampTransactions } from "../../../@/components/ui/OnRampTransaction";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../lib/auth";
 

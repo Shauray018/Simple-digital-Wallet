@@ -4,7 +4,8 @@ import { Card } from "@repo/ui/card";
 import { Select } from "@repo/ui/select";
 import { useState } from "react";
 import { TextInput } from "@repo/ui/textinput";
-import { createOnRampTransaction } from "../app/lib/actions/createOnrampTransaction";
+import { createOnRampTransaction } from "../../../app/lib/actions/createOnrampTransaction";
+import ShimmerButton from "../magicui/shimmer-button";
 
 const SUPPORTED_BANKS = [{
     name: "HDFC Bank",
@@ -36,7 +37,25 @@ export const AddMoney = () => {
                 value: x.name
             }))} />
             <div className="flex justify-center pt-4">
-                <Button 
+                <ShimmerButton className="shadow-2xl bg-black"
+                    onClick={async () => {
+                        setLoading(true);
+                        try {
+                            await createOnRampTransaction(provider, value);
+                            // Uncomment the next line if you want to redirect after successful transaction
+                            // window.location.href = redirectUrl || "";
+                        } catch (error) {
+                            console.error("Error creating on-ramp transaction:", error);
+                            // Handle error here (e.g., show an error message to the user)
+                        } finally {
+                            setLoading(false);
+                        }
+                    }}>
+                    <span className=" text-center text-sm font-medium leading-none   text-white lg:text-lg">
+                            AddMoney
+                    </span>
+                </ShimmerButton>
+                {/* <Button 
                     onClick={async () => {
                         setLoading(true);
                         try {
@@ -52,7 +71,7 @@ export const AddMoney = () => {
                     }}
                 >
                     {loading ? "Processing..." : "Add Money"}
-                </Button>
+                </Button> */}
             </div>
             {loading && (
                 <div className="flex justify-center mt-4">
