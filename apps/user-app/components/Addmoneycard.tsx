@@ -56,7 +56,7 @@ export const AddMoney = () => {
                             try {
                                 await createOnRampTransaction(provider, value);
                                 // Uncomment the next line if you want to redirect after successful transaction
-                                // window.location.href = redirectUrl || "";
+                                window.location.href = redirectUrl || "";
                             } catch (error) {
                                 console.error("Error creating on-ramp transaction:", error);
                                 // Handle error here (e.g., show an error message to the user)

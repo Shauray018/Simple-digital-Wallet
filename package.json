@@ -20,5 +20,9 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@prisma/client": "^5.16.2",
+    "react-loading-skeleton": "^3.4.0"
+  }
 }
