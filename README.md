@@ -14,11 +14,9 @@ A PayPal-like digital wallet application for managing online transactions and pa
 
 ### Home Page
 ![Home Page](images/Screenshot%202024-07-19%20020830.png)
-*Caption: The home page of our digital wallet, showing the user's balance and quick action buttons.*
 
 ### Transfer Page
 ![Transfer Page](images/Screenshot%202024-07-19%20020934.png)
-*Caption: The transfer page, where users can send money to other accounts.*
 
 ## Tech Stack
 
