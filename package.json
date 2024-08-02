@@ -22,7 +22,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@prisma/client": "^5.16.2",
+    "@prisma/client": "^5.17.0",
     "@react-three/fiber": "^8.16.8",
     "gsap": "^3.12.5",
     "react-loading-skeleton": "^3.4.0",
